@@ -1,0 +1,32 @@
+
+// h1
+# git workshop
+
+//h2
+## MFEE 25
+
+//h3
+### this is h3
+
+//粗體 //斜體
+這是一個練習 **git** 的 *專案*
+
+//連結(1) 
+[Git Workshop for MFEE25](https://hackmd.io/5uvteB-LSOG9MPy3VBvj9Q?view#%E4%BD%9C%E6%A5%AD)
+
+//連結(2)
+<a herf="https://hackmd.io/5uvteB-LSOG9MPy3VBvj9Q?view#%E4%BD%9C%E6%A5%AD">
+
+## New section
+
+//換行 (三空白)
+ this is line 1   
+ this is line 2
+
+ //加入code
+ ```javascript
+ console.log("abc")
+ ```
+
+//引言
+ >這是別人說的話
