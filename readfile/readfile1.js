@@ -1,8 +1,7 @@
-const axios = require('axios');
 const fs = require("fs");
 
 const promise = new Promise(function (resolve, reject) {
-  let readFile = fs.readFile;
+  // let readFile = fs.readFile;
 
   fs.readFile("test.txt", "utf-8", (err, data) => {
     if (err) {
@@ -25,6 +24,5 @@ async function doPromise() {
     console.log(err);
   }
 }
-
 doPromise();
 
