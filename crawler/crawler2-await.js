@@ -4,22 +4,25 @@
 const axios = require("axios");
 const fs = require("fs/promises");
 
-async function stock() {
+
+
+async function main() {
   try {
-    let stockNo = await fs.readFile("./stock.txt", "utf-8");
+    let number = await fs.readFile("./stock.txt", "utf-8");
     const response = await axios.get(
       "https://www.twse.com.tw/exchangeReport/STOCK_DAY",
       {
         params: {
           response: "json",
           date: "20220301",
-          stockNo: stockNo,
+          stockNo: number,
         },
       }
     );
+    console.log(response.data)
   } catch (error) {
     console.log(error);
   }
 }
 
-stock();
+main();
