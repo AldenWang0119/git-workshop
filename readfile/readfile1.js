@@ -1,8 +1,10 @@
+const axios = require('axios');
+const fs = require("fs");
+
 const promise = new Promise(function (resolve, reject) {
   let readFile = fs.readFile;
-  const fs = require("fs");
 
-  fs.readFile("test11111.txt", "utf-8", (err, data) => {
+  fs.readFile("test.txt", "utf-8", (err, data) => {
     if (err) {
       // 錯誤了
       console.log("喔喔喔，發生錯誤了");
@@ -14,12 +16,15 @@ const promise = new Promise(function (resolve, reject) {
   });
 });
 
-promise.then(
-  function (data) {
-    console.log(data);
-  },
-  function (err) {
-    console.log("喔喔喔，發生錯誤了");
-    console.error(err);
+
+async function doPromise() {
+  try {
+    const result = await promise;
+    console.log(result);
+  } catch (err) {
+    console.log(err);
   }
-);
+}
+
+doPromise();
+
