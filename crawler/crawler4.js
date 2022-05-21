@@ -3,16 +3,19 @@
 // mysql2 是一個第三方套件
 // npm i mysql2
 // 引用進來
-const { createConnection } = require('mysql2');
+// const { createConnection } = require('mysql2');
 const mysql = require('mysql2/promise');
+
+require('dotenv').config();
+
 
 (async () => {
   const connection = await mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'admin',
-    password: '12345',
-    database: 'node.js',
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
   });
 
   let [data, fields] = await connection.execute('SELECT * FROM stocks');
