@@ -11,7 +11,7 @@ const mysql = require('mysql2/promise');
     host: 'localhost',
     port: 3306,
     user: 'admin',
-    password: '',
+    password: '12345',
     database: 'node.js',
   });
 
@@ -27,4 +27,6 @@ const mysql = require('mysql2/promise');
 
   connection.end();
 })();
+
+wrong code = 'this is test for delete wrong git commite'
 
