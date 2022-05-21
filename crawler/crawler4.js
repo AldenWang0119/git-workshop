@@ -28,4 +28,6 @@ const mysql = require('mysql2/promise');
   connection.end();
 })();
 
+wrong code = 'this is test for delete wrong git commite'
+
 
