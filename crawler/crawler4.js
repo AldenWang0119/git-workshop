@@ -20,6 +20,10 @@ require('dotenv').config();
 
   let [data, fields] = await connection.execute('SELECT * FROM stocks');
   console.log(data);
+  
+
+  
+
 
   // results [
   //     [],
